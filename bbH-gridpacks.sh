@@ -1,12 +1,7 @@
-cmsrel CMSSW_7_1_28; cd CMSSW_7_1_28/src; cmsenv
+cmsrel CMSSW_7_1_28; cd CMSSW_7_1_28/src; cmsenv; scram b -j 8
 
-# The script makes use of a job submission module
-mkdir -p UserCode/ICHiggsTauTau/python
-wget https://raw.githubusercontent.com/ajgilbert/ICHiggsTauTau/master/python/jobs.py -O UserCode/ICHiggsTauTau/python/jobs.py
-scram b -j4
-
-git clone git@github.com:ajgilbert/MSSM-NLO.git
-cd MSSM-NLO
+git clone git@github.com:mflechl/bbH.git
+cd bbH
 
 wget https://launchpad.net/mg5amcnlo/2.0/2.2.x/+download/MG5_aMC_v2.3.0.beta.tar.gz
 tar -zxf MG5_aMC_v2.3.0.beta.tar.gz

@@ -1,0 +1,28 @@
+--- MG5_aMC_v2_3_0_beta/vendor/IREGI/src/oneloop/src/avh_olo_units.f90	2015-04-10 11:56:28.000000000 +0200
++++ MG5_aMC_v2_3_0_beta_curr/vendor/IREGI/src/oneloop/src/avh_olo_units.f90	2017-05-15 11:32:25.155213000 +0200
+@@ -20,9 +20,9 @@
+ 
+ module avh_olo_units
+   implicit none
+-  integer :: eunit=6
+-  integer :: wunit=6
+-  integer :: munit=6
++  integer :: eunit=0
++  integer :: wunit=0
++  integer :: munit=0
+   integer :: punit=0 ! print all
+   protected :: eunit,wunit,munit,punit !]PROTECTED
+ contains
+@@ -39,9 +39,9 @@
+   elseif (message(1:7).eq.'warning' ) then ;wunit=val
+   elseif (message(1:5).eq.'error'   ) then ;eunit=val
+   else
+-    eunit=val
+-    wunit=val
+-    munit=val
++    eunit=0
++    wunit=0
++    munit=0
+     punit=0
+   endif
+   end subroutine
