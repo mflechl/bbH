@@ -1,26 +1,23 @@
 #INSTRUCTIONS TO RUN WITH MG5_aMC_v2.3.0.beta
 
-cmsrel CMSSW_7_1_28; cd CMSSW_7_1_28/src; cmsenv; scram b -j 8
+cmsrel CMSSW_7_1_30; cd CMSSW_7_1_30/src; cmsenv; scram b -j 8
 
 git clone git@github.com:mflechl/bbH.git
 cd bbH
+git checkout MG5_v2.6
 
-wget https://launchpad.net/mg5amcnlo/2.0/2.2.x/+download/MG5_aMC_v2.3.0.beta.tar.gz
-tar -zxf MG5_aMC_v2.3.0.beta.tar.gz
-
-# patches needed to fix this bug: https://bugs.launchpad.net/mg5amcnlo/+bug/1483772
-patch MG5_aMC_v2_3_0_beta/vendor/CutTools/src/avh/avh_olo.f90 cuttools_avh_olo.f90.patch
-patch MG5_aMC_v2_3_0_beta/vendor/IREGI/src/oneloop/src/avh_olo_units.f90 oneloop_avh_olo_units.f90.patch
+wget https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.1.tar.gz
+tar -zxf MG5_aMC_v2.6.1.tar.gz
 
 # Generate dummy process directory interactively. I think this is mostly just to compile some of the common libraries we need.
-cd MG5_aMC_v2_3_0_beta/
+cd MG5_aMC_v2_6_1
 ./bin/mg5
 generate p p > h b b~ [QCD]
 output bbH_test
 exit
   
 cd ..
-tar -zxf bbH_4FS_yb2_modified.tar.gz
+tar -zxf bbH_4FS_yb2_modified.tar.g
 
 # Edit any of the cards, e.g. bbH_4FS_yb2/Cards/run_card.dat for sqrt(s)
 
