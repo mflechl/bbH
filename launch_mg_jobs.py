@@ -12,7 +12,7 @@ from itertools import product
 job_mgr = Jobs()
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--mg-dir', default='./MG5_aMC_v2_3_0_beta')
+parser.add_argument('--mg-dir', default='./MG5_aMC_v2_6_1')
 parser.add_argument('--base', default='./bbH_4FS_yb2')
 parser.add_argument('-n', '--nevents', default=500000, type=int)
 parser.add_argument('--mg-split', default=10000, type=int)

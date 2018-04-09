@@ -1,4 +1,4 @@
-#INSTRUCTIONS TO RUN WITH MG5_aMC_v2.3.0.beta
+#INSTRUCTIONS TO RUN WITH MG5_aMC_v2.6.1
 
 cmsrel CMSSW_7_1_30; cd CMSSW_7_1_30/src; cmsenv; scram b -j 8
 
@@ -17,7 +17,7 @@ output bbH_test
 exit
   
 cd ..
-tar -zxf bbH_4FS_yb2_modified.tar.g
+tar -zxf bbH_4FS_yb2_modified.tar.gz
 
 # Edit any of the cards, e.g. bbH_4FS_yb2/Cards/run_card.dat for sqrt(s)
 
