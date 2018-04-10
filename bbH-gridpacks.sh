@@ -4,6 +4,7 @@ cmsrel CMSSW_7_1_28; cd CMSSW_7_1_28/src; cmsenv; scram b -j 8
 
 git clone git@github.com:mflechl/bbH.git
 cd bbH
+git checkout MG5_v2.3
 
 wget https://launchpad.net/mg5amcnlo/2.0/2.2.x/+download/MG5_aMC_v2.3.0.beta.tar.gz
 tar -zxf MG5_aMC_v2.3.0.beta.tar.gz
