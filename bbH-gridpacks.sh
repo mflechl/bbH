@@ -1,4 +1,5 @@
 #INSTRUCTIONS TO RUN WITH MG5_aMC_v2.6.1
+#They need to be entered line-by-line (i.e. not executed as a script)
 
 cmsrel CMSSW_7_1_30; cd CMSSW_7_1_30/src; cmsenv; scram b -j 8
 
@@ -14,6 +15,7 @@ cd MG5_aMC_v2_6_1
 generate p p > h b b~ [QCD]
 output bbH_test
 exit
+cat bbH_test/Source/PDF/pdfwrap_lhapdf.f | sed s#'      CALL SETPDFPATH(LHAPATH)'#'C      CALL SETPDFPATH(LHAPATH)'#g >bbH_test/Source/PDF/pdfwrap_lhapdf.f
   
 cd ..
 tar -zxf bbH_4FS_yb2_modified.tar.gz

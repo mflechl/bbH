@@ -76,6 +76,8 @@ for MASS in args.mass.split(','):
             amc_cfg = amc_file.read()
         amc_cfg = amc_cfg.replace('{MG_PATH}', '%s' % os.path.abspath(args.mg_dir))
         amc_cfg = amc_cfg.replace('{LHAPDF_PATH}', '%s/bin/lhapdf-config' % subprocess.check_output(['scram', 'tool tag lhapdf LHAPDF_BASE']).strip())
+#        amc_cfg = amc_cfg.replace('{FASTJET_PATH}', '%s/bin/fastjet-config' % subprocess.check_output(['scram', 'tool tag fastjet FASTJET_BASE']).strip())
+        amc_cfg = amc_cfg.replace('{FASTJET_PATH}', '/cvmfs/cms.cern.ch/slc6_amd64_gcc481//external/fastjet/3.1.0/bin/fastjet-config')
         with open('%s/Cards/amcatnlo_configuration.txt' % (workdir), "w") as outfile:
             outfile.write(amc_cfg)
         
