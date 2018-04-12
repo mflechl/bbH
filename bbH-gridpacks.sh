@@ -36,8 +36,8 @@ python launch_mg_jobs.py -m 200,250,350,400,450,500,600,700,800,900,1000,1200,14
 
 
 # Once jobs are done, convert output into an official-style gridpack:
-cp -pr MG5_aMC_v2_3_0_beta MG5_aMC_v2_3_0_beta_ref
-rm -rf MG5_aMC_v2_3_0_beta_ref/bbH_4FS_yb2*
+cp -pr MG5_aMC_v2_6_1/ MG5_aMC_v2_6_1_ref
+rm -rf MG5_aMC_v2_6_1_ref/bbH_4FS_yb2*
 python launch_mg_jobs.py -m 200,250,350,400,450,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2300,2600,2900,3200,3500 --step gridpack --dir jobs/ --qsh 0 --cores 4 -n 100 --req-acc 0.001 --gp-name SUSYGluGluToBBHToTauTau_M-
 
 
