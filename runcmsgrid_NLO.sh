@@ -23,7 +23,7 @@ if [ "$use_gridpack_env" = true ]
       then
         scram_arch_version=${5}
       else
-        scram_arch_version=SCRAM_ARCH_VERSION_REPLACE
+        scram_arch_version=slc6_amd64_gcc481
     fi
     echo "%MSG-MG5 SCRAM_ARCH version = $scram_arch_version"
 
@@ -31,7 +31,7 @@ if [ "$use_gridpack_env" = true ]
       then
         cmssw_version=${6}
       else
-        cmssw_version=CMSSW_VERSION_REPLACE
+        cmssw_version=CMSSW_7_1_30
     fi
     echo "%MSG-MG5 CMSSW version = $cmssw_version"
     export VO_CMS_SW_DIR=/cvmfs/cms.cern.ch
@@ -90,7 +90,7 @@ if [ ! -e $LHEWORKDIR/header_for_madspin.txt ]; then
       runlabel=${runname}_decayed_1
     fi
 
-    pdfsets="PDF_SETS_REPLACE"
+    pdfsets="320900,11082,13091@0,13191@0,13202@0,23100,23300,23490,23600,23790,25410,25510,25570,25605,25620,25710,25770,25805,25840,92000,306000,320500,260400,262400@0,263400@0,292000,292400@0"
     scalevars="--mur=1,2,0.5 --muf=1,2,0.5 --together=muf,mur --dyn=-1"
 
     echo "systematics $runlabel --remove_wgts=all --start_id=1001 --pdf=$pdfsets $scalevars" | ./bin/aMCatNLO

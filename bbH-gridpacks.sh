@@ -46,5 +46,5 @@ python launch_mg_jobs.py -m 200,250,350,400,450,500,600,700,800,900,1000,1200,14
 
 #to test: new area
 cmsrel CMSSW_7_1_30; cd CMSSW_7_1_30/src; cmsenv
-tar -xavf <name>.tar.xz
+tar -axf <name>.tar.xz
 ./runcmsgrid.sh 100 733 4  #<NEvents> <RandomSeed> <NumberOfCPUs>
