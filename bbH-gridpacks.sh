@@ -6,7 +6,7 @@ cmsrel CMSSW_7_1_30; cd CMSSW_7_1_30/src; cmsenv; scram b -j 8
 git clone git@github.com:mflechl/bbH.git -b MG5_v2.6
 cd bbH
 
-wget https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.1.tar.gz
+#wget https://launchpad.net/mg5amcnlo/2.0/2.6.x/+download/MG5_aMC_v2.6.1.tar.gz
 tar -zxf MG5_aMC_v2.6.1.tar.gz
 
 # Generate dummy process directory interactively. I think this is mostly just to compile some of the common libraries we need.
