@@ -98,7 +98,9 @@ for MASS in args.mass.split(','):
         
         base_cmd = 'cd %s' % workdir
         cmd = base_cmd
-        cmd += '; echo "3" | ./bin/generate_events --nb_core=%i' % args.cores
+        cmd += '; echo -e "3\\n3" | ./bin/generate_events --nb_core=%i' % args.cores
+#        cmd += '; echo "3" | ./bin/generate_events --nb_core=%i' % args.cores
+#echo -e "3\n3"
 
         job_mgr.job_queue.append(cmd)
     
